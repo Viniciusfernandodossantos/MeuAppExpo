@@ -11,10 +11,7 @@ export default function HomeScreen() {
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#FBE8A6', dark: '#8B5E3C' }}
       headerImage={
-        <Image
-          source={require('@/assets/images/padaria-header.png')} // Coloque uma imagem real aqui
-          style={styles.reactLogo}
-        />
+        
       }>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Bem-vindo à Padoca Delícia!</ThemedText>
