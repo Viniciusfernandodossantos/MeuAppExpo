@@ -9,22 +9,52 @@ import { ThemedView } from '@/components/ThemedView';
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: '#FBE8A6', dark: '#8B5E3C' }}
       headerImage={
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
+          source={require('@/assets/images/padaria-header.png')} // Coloque uma imagem real aqui
           style={styles.reactLogo}
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
+        <ThemedText type="title">Bem-vindo à Padoca Delícia!</ThemedText>
         <HelloWave />
       </ThemedView>
+
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
+        <ThemedText type="subtitle">🥐 Destaques do Dia</ThemedText>
+        <ThemedText>- Pão francês crocante</ThemedText>
+        <ThemedText>- Sonho com creme</ThemedText>
+        <ThemedText>- Café especial moído na hora</ThemedText>
+      </ThemedView>
+
+      <ThemedView style={styles.stepContainer}>
+        <ThemedText type="subtitle">🕘 Horário de Funcionamento</ThemedText>
+        <ThemedText>Seg a Sáb: 06h às 19h</ThemedText>
+        <ThemedText>Domingos: 07h às 13h</ThemedText>
+      </ThemedView>
+
+      <ThemedView style={styles.stepContainer}>
+        <ThemedText type="subtitle">📍 Endereço</ThemedText>
+        <ThemedText>Rua das Rosas, 123 - Centro</ThemedText>
+        <ThemedText>Cidade do Pão, SP</ThemedText>
+      </ThemedView>
+
+      <ThemedView style={styles.stepContainer}>
+        <ThemedText type="subtitle">📱 Dica!</ThemedText>
         <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
+          Toque na aba "Produtos" abaixo para ver todos os itens fresquinhos disponíveis.
+        </ThemedText>
+      </ThemedView>
+
+      <ThemedView style={styles.stepContainer}>
+        <ThemedText type="subtitle">👩‍🍳 Equipe</ThemedText>
+        <ThemedText>Feito com carinho pela família Souza desde 1998.</ThemedText>
+      </ThemedView>
+
+      <ThemedView style={styles.stepContainer}>
+        <ThemedText>
+          Pressione{' '}
           <ThemedText type="defaultSemiBold">
             {Platform.select({
               ios: 'cmd + d',
@@ -32,23 +62,7 @@ export default function HomeScreen() {
               web: 'F12',
             })}
           </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
+          para abrir as ferramentas de desenvolvedor.
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
@@ -63,13 +77,14 @@ const styles = StyleSheet.create({
   },
   stepContainer: {
     gap: 8,
-    marginBottom: 8,
+    marginBottom: 12,
+    marginHorizontal: 12,
   },
   reactLogo: {
-    height: 178,
-    width: 290,
+    height: 200,
+    width: '100%',
+    position: 'absolute',
     bottom: 0,
     left: 0,
-    position: 'absolute',
   },
 });

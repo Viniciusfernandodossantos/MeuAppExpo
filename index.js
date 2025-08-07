@@ -1,17 +1,5 @@
-import { StyleSheet, Text, View } from 'react-native';
+import HomeScreen from '@/components/HomeScreen';
 
 export default function Page() {
-  return (
-    <View style={styles.container}>
-      <Text>Olá, mundo com Expo Router!</Text>
-    </View>
-  );
+  return <HomeScreen />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
-});
